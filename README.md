@@ -124,11 +124,3 @@ node --test "test/**/*.mjs"   # 25 tests: unit + real-cordis decoration + real-b
   through the real provider, and asserts the session workspace is granted
   (`--dev-bind` present, `nvidia-smi` works inside the wrap) while an unrelated
   root stays denied. Skips without the harness checkout, patch, bwrap, or GPU.
-
-## Docs
-
-- [`docs/2026-10-27-podman-grant.md`](docs/2026-10-27-podman-grant.md) — root
-  cause and fix for a podman-container outage where the allow-list omitted the
-  session workspace, plus the troubleshooting trail (bwrap shim compatibility,
-  the nested-bwrap test pitfall, and how to tell plugin faults from missing
-  workspace directories).
