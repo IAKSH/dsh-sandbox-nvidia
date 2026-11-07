@@ -124,3 +124,7 @@ node --test "test/**/*.mjs"   # 25 tests: unit + real-cordis decoration + real-b
   through the real provider, and asserts the session workspace is granted
   (`--dev-bind` present, `nvidia-smi` works inside the wrap) while an unrelated
   root stays denied. Skips without the harness checkout, patch, bwrap, or GPU.
+
+## License
+
+[MIT](LICENSE) © 2026 IAKSH — same license as the DeepSeek Harness it plugs into.
