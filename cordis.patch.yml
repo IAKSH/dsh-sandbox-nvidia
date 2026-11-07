@@ -1,0 +1,21 @@
+# The dsh-sandbox-nvidia bundle patch: decorates the mounted ctx.sandbox
+# provider. Addressable by id `sandbox-nvidia` from the profile's own
+# cordis.patch.yml (last write wins). DENY BY DEFAULT: an empty config
+# grants nothing — enable per dimension below.
+- insert:
+    - id: sandbox-nvidia
+      name: dsh-sandbox-nvidia
+      # config:
+      #   # Grant by opaque session id:
+      #   sessions:
+      #     - 019abc...            # SessionId from the session header
+      #   # Grant by workspace root (prefix, boundary-safe):
+      #   workspaces:
+      #     - /home/dsh/ml
+      #   # Escape hatch — every session gets the GPU:
+      #   allSessions: false
+      #   # Pin nodes instead of auto-discovering /dev/nvidia*:
+      #   devices:
+      #     - /dev/nvidia0
+      #     - /dev/nvidiactl
+      #     - /dev/nvidia-uvm
